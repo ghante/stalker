@@ -12,7 +12,7 @@ username = ARGV[0]
 raise "Need to specify username" unless username
 
 begin
-  Stalker::Application.stalk(username)
+  Stalker::Application.new(username).execute!
 rescue Exception => ex
   STDERR.puts ex.message
 end
