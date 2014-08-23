@@ -1,7 +1,7 @@
 module Stalker
   class Configuration
     def self.key
-      'key'
+      'Al8clV8QcwX46K5MqQrpyp9il'
     end
 
     def self.secret
