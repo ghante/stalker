@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+
+require 'stalker'
+require 'optparse'
+
+options = {}
+OptionParser.new do |opts|
+  opts.banner = "Usage: stalk <username>"
+end.parse!
+
+username = ARGV[0]
+raise "Need to specify username" unless username
+
+begin
+  Stalker::Application.stalk(username)
+rescue Exception => ex
+  STDERR.puts ex.message
+end
