@@ -2,6 +2,7 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'stalker/version'
+require 'rake'
 
 Gem::Specification.new do |spec|
   spec.name          = "stalker"
@@ -12,13 +13,12 @@ Gem::Specification.new do |spec|
   spec.description   = %q{Finds tweets in which the person was mentioned.}
   spec.homepage      = ""
 
-  spec.files         = `git ls-files -z`.split("\x0")
+  spec.files         = FileList['**/**/*'].exclude /.git|.svn|.DS_Store/
   spec.executables   = ["stalk"]
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.6"
-  spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec"
   spec.add_development_dependency "webmock"
   spec.add_development_dependency "aruba"
