@@ -1,24 +1,20 @@
 # Stalker
-
-TODO: Write a gem description
+Command line application as a gem to stalk people on twitter. Finds tweets in which the person was mentioned.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Checkout the code and run
 
-    gem 'stalker'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install stalker
+    $ rake install
+         OR  
+    $ gem build ./stalker.gemspec
+    $ gem install ./stalker-0.0.1.gem
 
 ## Usage
 
-TODO: Write usage instructions here
+    $ stalk <username>
+For Example : 
+    $ stalk LeoDiCaprio
 
 ## Contributing
 
