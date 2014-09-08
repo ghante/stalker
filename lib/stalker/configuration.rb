@@ -1,11 +1,11 @@
 module Stalker
   class Configuration
     def self.key
-      'Al8clV8QcwX46K5MqQrpyp9il'
+      '<<key goes here>>'
     end
 
     def self.secret
-      'U5iB6KWZSGCs5M3KNkLtm7hhCdTE1yAfEIbVvwVptDOr4SvQUh'
+      '<<secret goes here>>'
     end
   end
 end
